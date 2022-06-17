@@ -2,6 +2,7 @@ from enum import Enum
 
 from classes.csv_exporter import CSVExporter
 from classes.data_exporter import DataExporter
+from classes.excel_exporter import ExcelExporter
 from classes.html_exporter import HTMLExporter
 
 
@@ -20,7 +21,8 @@ class DataExporterFactory:
         self.name = name
         self.data_exporter_class_dict = {
             DataExporterType.HTML: HTMLExporter,
-            DataExporterType.CSV: CSVExporter
+            DataExporterType.CSV: CSVExporter,
+            DataExporterType.EXCEL: ExcelExporter,
         }
 
     def create_data_exporter(self, data_exporter_type: DataExporterType) -> DataExporter:

@@ -4,4 +4,9 @@ from classes.data_exporter import DataExporter
 
 class ExcelExporter(DataExporter):
     def export_data(self, dataframe: pd.DataFrame):
-        dataframe.to_excel(f"{self.name}.xlsx")
+        """
+        Exports dataframe as Excel file.
+        :param dataframe: Pandas dataframe
+        :return: None
+        """
+        dataframe.to_excel(f"{self.name}.xlsx", index=False)

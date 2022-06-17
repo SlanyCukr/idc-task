@@ -4,5 +4,10 @@ from classes.data_exporter import DataExporter
 
 class HTMLExporter(DataExporter):
     def export_data(self, dataframe: pd.DataFrame):
-        with open(f"{self.name}.html") as f:
-            f.write(dataframe.to_html())
+        """
+        Exports data as HTML file.
+        :param dataframe: Pandas dataframe
+        :return: None
+        """
+        with open(f"{self.name}.html", "w") as f:
+            f.write(dataframe.to_html(index=False))
