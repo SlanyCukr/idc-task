@@ -4,7 +4,7 @@ import pandas as pd
 class DataAccesser:
     def __init__(self, dataframe: pd.DataFrame):
         """
-        This class is used to perform additional manipulation with dataframe.
+        This class is used to perform additional manipulation with dataframe - sorting.
         Also implements functions to fetch data.
         :param dataframe: Pandas dataframe
         """

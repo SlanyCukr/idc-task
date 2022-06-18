@@ -28,7 +28,7 @@ def load_adjust_data(data_filename: str, exchange_filename: str, local_country: 
     total_revenue = data_df['Revenue (USD)'].sum()
     data_df['Share'] = (data_df['Revenue (USD)'] / total_revenue) * 100
 
-    # total statistics
+    # total statistics - append new row to data dataframe
     data_df.loc[len(data_df.index)] = ['Total', total_revenue, data_df['Revenue (Local)'].sum(), data_df['Share'].sum()]
 
     # round to 2 decimal places
